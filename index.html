@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Oasis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                Vision<span class="eye"><i class="material-icons">visibility</i></span>asis
+            </div>
+            <div class="search-container">
+                <div class="search-bar">
+                    <button class="search-icon"><i class="material-icons">search</i></button>
+                    <input type="text" placeholder="Search" aria-label="Search">
+                    <span class="shortcut">Ctrl + M for voice</span>
+                    <button class="mic-button" aria-label="Voice Search"><i class="material-icons">mic</i></button>
+                </div>
+            </div>
+            <div class="nav-controls">
+                <button class="menu-button" aria-label="Toggle Menu">
+                    <span class="menu-lines"></span>
+                </button>
+            </div>
+        </nav>
+        <div class="mobile-nav">
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#booking" class="nav-link">Booking</a></li>
+                <li><a href="#feedback" class="nav-link">Feedback</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="doctor-container">
+                <div class="doctor-image">
+                    <img src="samp_pic.png" alt="Dr. KwakWak" class="doctor-avatar">
+                    <div class="medical-cross">+</div>
+                </div>
+                <div class="doctor-info">
+                    <h1>DR. KWAKWAK, OPH</h1>
+                    <h2>Ophthalmologist</h2>
+                    <p>Welcome to Your Vision Oasis! With over 20 years of experience in the world of eye care, I'm here to help you see the world in all its vibrant colors! Whether you need a routine check-up, expert advice, or advanced treatment options, I blend professionalism with a touch of fun to make your visit as enjoyable as possible. Let's embark on a journey to better vision together—because life is too beautiful to miss a single detail!</p>
+                    <button class="book-now" id="bookNowBtn">
+                        BOOK NOW
+                        <span class="shortcut">Ctrl + B</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <h2 class="section-title">What Our Patients Say</h2>
+            <div class="carousel">
+                <div class="carousel-item active">
+                    <div class="testimonial-container">
+                        <p class="testimonial-content">"Dr. KwakWak is amazing! The staff is very professional and caring. I had a great experience and would highly recommend to anyone!"</p>
+                        <span class="testimonial-author">- Sarah Johnson</span>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial-container">
+                        <p class="testimonial-content">"Very thorough examination and clear explanation of my eye condition. The new office is modern and comfortable."</p>
+                        <span class="testimonial-author">- Michael Chen</span>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial-container">
+                        <p class="testimonial-content">"Outstanding service! Dr. KwakWak took the time to answer all my questions. The staff was friendly and helpful."</p>
+                        <span class="testimonial-author">- Emily Rodriguez</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking" class="booking">
+            <h2 class="section-title">Book Your Appointment</h2>
+            <div class="booking-form">
+                <form id="appointmentForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Type</label>
+                        <select id="service" required>
+                            <option value="">Select a service</option>
+                            <option value="checkup">Routine Check-up</option>
+                            <option value="consultation">Consultation</option>
+                            <option value="treatment">Treatment</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="form-submit">Schedule Appointment</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="feedback" class="feedback">
+            <h2 class="section-title">Share Your Experience</h2>
+            <div class="feedback-form">
+                <form id="feedbackForm">
+                    <div class="form-group">
+                        <label for="feedback-name">Your Name</label>
+                        <input type="text" id="feedback-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Rating</label>
+                        <div class="emoji-slider">
+                            <input type="range" id="emoji-slider" name="rating" min="1" max="5" value="3" class="slider">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedback-message">Your Message</label>
+                        <textarea id="feedback-message" rows="4" placeholder="Tell us about your experience..." required></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">
+                        Submit Feedback
+                        <span class="submit-icon">→</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Vision Oasis. All rights reserved.</p>
+            <p>Contact: info@visionoasis.com | Phone: (123) 456-7890</p>
+            <div class="social-media">
+                <a href="#" class="social-icon"><i class="material-icons">facebook</i></a>
+                <a href="#" class="social-icon"><i class="material-icons">twitter</i></a>
+                <a href="#" class="social-icon"><i class="material-icons">instagram</i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="customization-button" id="customizeBtn">
+        CUSTOMIZATION
+        <div class="color-wheel-icon"><i class="material-icons">palette</i></div>
+    </div>
+
+    <div class="customization-menu">
+        <div class="menu-content">
+            <h3>Customize Your View</h3>
+            <div class="customize-section">
+                <h4>Theme Colors</h4>
+                <div class="color-options">
+                    <button class="color-option" data-theme="default" style="background: #fdb347">
+                        <span class="color-name">Orange</span>
+                    </button>
+                    <button class="color-option" data-theme="cool" style="background: #4a90e2">
+                        <span class="color-name">Blue</span>
+                    </button>
+                    <button class="color-option" data-theme="warm" style="background: #e67e22">
+                        <span class="color-name">Amber</span>
+                    </button>
+                    <button class="color-option" data-theme="dark" style="background: #34495e">
+                        <span class="color-name">Dark</span>
+                    </button>
+                </div>
+            </div>
+            <div class="customize-section">
+                <h4>Font Size</h4>
+                <div class="font-controls">
+                    <button class="font-btn" id="decreaseFont">A-</button>
+                    <span class="font-size-display">100%</span>
+                    <button class="font-btn" id="increaseFont">A+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
